@@ -1,2 +1,8 @@
 export { ReactComponent as Bar } from './bars-solid.svg'
 export { ReactComponent as Toilet } from './toilet.svg'
+export { ReactComponent as Good } from './good.svg'
+export { ReactComponent as Soso } from './soso.svg'
+export { ReactComponent as Bad } from './bad.svg'
+export { ReactComponent as VeryBad } from './verybad.svg'
+export { ReactComponent as Wind } from './wind-solid.svg'
+export { ReactComponent as Fix } from './fix.svg'

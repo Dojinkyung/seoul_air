@@ -1,0 +1,38 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+.info {
+  @include flexbox.flexbox(between, center);
+  flex-direction: column;
+  .title {
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: colors.$GRAY3;
+  }
+
+  .item {
+    @include flexbox.flexbox(evenly, center);
+    flex-direction: row;
+    margin: 15px;
+    .dl {
+      width: 100%;
+    }
+    dt {
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      margin-right: 20px;
+      color: colors.$GRAY6;
+      &:after {
+        content: ': ';
+      }
+    }
+    dd {
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      color: colors.$GRAY6;
+    }
+  }
+}

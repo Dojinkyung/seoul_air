@@ -1,0 +1,29 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+.city {
+  @include flexbox.flexbox(center, center);
+  flex-direction: column;
+  width: 360px;
+  height: 720px;
+  overflow: hidden;
+  background-color: colors.$APP_BACKGROUND_COLOR;
+  border-radius: 60px;
+  .header {
+    position: relative;
+  }
+  box-shadow: 0px 4px 10px rgb(0 0 0 / 4%);
+  .title {
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: colors.$GRAY3;
+  }
+  .main {
+    width: 300px;
+    height: 550px;
+    padding: 40px;
+
+    overflow: scroll;
+  }
+}
