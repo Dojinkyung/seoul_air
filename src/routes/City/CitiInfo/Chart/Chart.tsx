@@ -1,5 +1,5 @@
 import { VictoryBar, VictoryChart, VictoryTooltip, VictoryVoronoiContainer, VictoryAxis } from 'victory'
-import { ICityRow } from '../../../types/City.d'
+import { ICityRow } from '../../../../types/City.d'
 
 interface props {
   item: ICityRow

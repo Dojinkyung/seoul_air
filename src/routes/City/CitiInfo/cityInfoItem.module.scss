@@ -1,0 +1,60 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+.bg {
+  @include flexbox.flexbox(center, center);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+}
+
+.modalActive {
+  @include flexbox.flexbox(start, center);
+  flex-direction: column;
+  background-color: colors.$WHITE;
+  color: colors.$GRAYD;
+  border-radius: 60px;
+  box-shadow: 0px 4px 10px rgb(0 0 0 / 4%);
+  width: 300px;
+  height: 550px;
+  padding: 10px;
+  overflow: scroll;
+  .head {
+    width: 230px;
+    margin-top: 10px;
+    @include flexbox.flexbox(between, start);
+    .backBTN {
+      .backIcon {
+        fill: colors.$SOSO;
+      }
+    }
+  }
+
+  .item {
+    @include flexbox.flexbox(evenly, center);
+    flex-direction: row;
+    margin: 15px;
+    .dl {
+      width: 100%;
+    }
+    dt {
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      margin-right: 20px;
+      color: colors.$GRAY6;
+      &:after {
+        content: ': ';
+      }
+    }
+    dd {
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      color: colors.$GRAY6;
+    }
+  }
+}

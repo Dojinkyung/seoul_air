@@ -5,6 +5,8 @@
   @include flexbox.flexbox(center, center);
   flex-direction: column;
   min-width: 80px;
+  max-width: 200px;
+  padding-top: 15px;
 }
 .goodIcon {
   fill: colors.$GOOD;

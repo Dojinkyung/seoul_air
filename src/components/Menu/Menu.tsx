@@ -1,16 +1,20 @@
-import { Wind } from '../../assets/svgs'
+import { useSelector } from 'react-redux'
+import { NavLink } from 'react-router-dom'
+import { getMenu } from '../../redux/slice'
+import { cx } from '../../styles'
 import styles from './menu.module.scss'
 
-const Menu = (prop: boolean) => {
-  if (prop === true) {
+const Menu = () => {
+  const menu = useSelector(getMenu)
+  if (menu) {
     return (
       <div className={styles.nav}>
-        <main className={styles.main}>
-          <Wind className={styles.windIcon} />
-        </main>
-        <aside>
-          <a href='http://data.seoul.go.kr/dataList/OA-1201/S/1/datasetView.do'>서울 열린데이터 광장 자료 이용</a>
-        </aside>
+        <NavLink className={({ isActive }) => cx(styles.navBtn, { [styles.isActive]: isActive })} to='/'>
+          서울시
+        </NavLink>
+        <NavLink className={({ isActive }) => cx(styles.navBtn, { [styles.isActive]: isActive })} to='/city'>
+          지역별
+        </NavLink>
       </div>
     )
   }

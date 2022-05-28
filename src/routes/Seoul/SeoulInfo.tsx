@@ -6,7 +6,6 @@ const SeoulInfo = () => {
   if (dataSeoul) {
     return (
       <div className={styles.info}>
-        <h1 className={styles.title}>서울시 실시간 대기환경 평균 현황</h1>
         <dl className={styles.dl}>
           <div className={styles.item}>
             <dt>이산화질소</dt>

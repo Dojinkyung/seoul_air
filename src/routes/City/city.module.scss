@@ -1,17 +1,19 @@
 @use '/src/styles/constants/colors';
 @use '/src/styles/mixins/flexbox';
 .city {
-  @include flexbox.flexbox(center, center);
+  @include flexbox.flexbox(end, center);
   flex-direction: column;
   width: 360px;
   height: 720px;
   overflow: hidden;
   background-color: colors.$APP_BACKGROUND_COLOR;
   border-radius: 60px;
-  .header {
-    position: relative;
-  }
   box-shadow: 0px 4px 10px rgb(0 0 0 / 4%);
+  .header {
+    position: fixed;
+    top: 0;
+  }
+
   .title {
     display: inline;
     font-size: 20px;
@@ -22,8 +24,13 @@
   .main {
     width: 300px;
     height: 550px;
-    padding: 40px;
-
     overflow: scroll;
+  }
+  .link {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    color: colors.$SOSO;
+    text-decoration: underline;
   }
 }

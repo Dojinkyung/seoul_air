@@ -3,7 +3,6 @@ interface RealtimeCityAir {
   RESULT: RESULT
   row: Row[]
 }
-
 export interface ICityRow {
   MSRDT: string
   MSRRGN_NM: string
@@ -17,6 +16,7 @@ export interface ICityRow {
   IDEX_NM: string
   IDEX_MVL: number
   ARPLT_MAIN: string
+  Fav: boolean
 }
 
 interface RESULT {
