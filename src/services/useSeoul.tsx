@@ -3,8 +3,7 @@ import { isAxiosError } from '../utils/axios'
 import { axios } from '../hooks/worker'
 import { IRow } from '../types/Seoul.d'
 
-const PROXY = window.location.hostname === 'localhost' ? '' : '/proxy'
-const BASE_URL = `${PROXY}/${process.env.REACT_APP_API_KEY}/json/ListAvgOfSeoulAirQualityService/1/1`
+const BASE_URL = `http://openapi.seoul.go.kr:8088/${process.env.REACT_APP_API_KEY}/json/ListAvgOfSeoulAirQualityService/1/1`
 
 const useSeoul = () => {
   const { data } = useQuery(

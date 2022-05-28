@@ -2,7 +2,7 @@
   "name": "madup",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://openapi.seoul.go.kr:8088",
+  "homepage": "http://Dojinkyung.github.io/wanted_personal_project",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.14.1",
@@ -17,6 +17,7 @@
     "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "dayjs": "^1.11.2",
+    "gh-pages": "^4.0.0",
     "husky-init": "^8.0.0",
     "lint-staged": "^12.4.1",
     "react": "^18.1.0",
@@ -38,7 +39,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier .  --write",
-    "lint": "eslint */**.{ts,tsx} --fix"
+    "lint": "eslint */**.{ts,tsx} --fix",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
