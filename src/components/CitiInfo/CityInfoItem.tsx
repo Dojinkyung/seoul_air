@@ -1,14 +1,15 @@
 import dayjs from 'dayjs'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import store from 'store'
 
 import styles from './cityInfoItem.module.scss'
 import Chart from './Chart/Chart'
 import CityInfo from './CityInfo'
-import { getCityNameValue } from '../../../redux/slice'
-import { ICityRow } from '../../../types/City.d'
-import { cx } from '../../../styles'
-import { XIcon } from '../../../assets/svgs'
-import Grade from '../../../components/Grade/Grade'
+import { ICityRow } from '../../types/City.d'
+import { getCityNameValue, setCity } from '../../redux/slice'
+import { cx } from '../../styles'
+import { Star, XIcon } from '../../assets/svgs'
+import Grade from '../Grade/Grade'
 
 interface props {
   data: ICityRow
@@ -17,8 +18,23 @@ interface props {
 }
 const CityInfoItem = (props: props) => {
   const cityName = useSelector(getCityNameValue)
+  const dispatch = useDispatch()
   const { data, open, close } = props
-
+  const handleFav = () => {
+    if (data.Fav === false) {
+      data.Fav = true
+      store.set('fav', [...store.get('fav'), data])
+      dispatch(setCity(store.get('fav')))
+    } else {
+      data.Fav = false
+      store.set(
+        'fav',
+        [...store.get('fav')].filter((fav: ICityRow) => fav.MSRSTE_NM !== data?.MSRSTE_NM)
+      )
+      dispatch(setCity(store.get('fav')))
+    }
+    close()
+  }
   if (data.MSRSTE_NM === cityName) {
     return (
       <div className={cx({ [styles.bg]: open })}>
@@ -26,6 +42,9 @@ const CityInfoItem = (props: props) => {
           <div className={styles.head}>
             <button type='button' onClick={close} className={styles.backBTN}>
               <XIcon className={styles.backIcon} />
+            </button>
+            <button type='button' onClick={handleFav} className={styles.favBTN}>
+              <Star className={cx(styles.starIcon1, { [styles.starIcon2]: !data.Fav })} />
             </button>
           </div>
           <Grade item={data.IDEX_NM} />
@@ -40,7 +59,7 @@ const CityInfoItem = (props: props) => {
             </div>
             <div className={styles.item}>
               <dt>측정일시</dt>
-              <dd>{dayjs(data.MSRDT).format('YYYY-MM-DD HH:DD')}</dd>
+              <dd>{dayjs(data.MSRDT).format('YYYY-MM-DD HH:mm')}</dd>
             </div>
           </dl>
           <Chart item={data} />

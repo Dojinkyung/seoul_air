@@ -15,6 +15,9 @@ const Menu = () => {
         <NavLink className={({ isActive }) => cx(styles.navBtn, { [styles.isActive]: isActive })} to='/city'>
           지역별
         </NavLink>
+        <NavLink className={({ isActive }) => cx(styles.navBtn, { [styles.isActive]: isActive })} to='/favorite'>
+          즐겨찾기
+        </NavLink>
       </div>
     )
   }

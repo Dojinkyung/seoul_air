@@ -1,4 +1,4 @@
-import { ICityRow } from '../../../types/City.d'
+import { ICityRow } from '../../types/City.d'
 import styles from './cityInfo.module.scss'
 
 interface props {

@@ -1,16 +1,16 @@
 import Header from '../../components/Headbar/HeadBar'
-import styles from './city.module.scss'
-import AllItems from './AllItem/allItems'
+import styles from './fav.module.scss'
+import FavItems from './FavItems'
 
-const City = () => {
+const Favorite = () => {
   return (
-    <div className={styles.city}>
+    <div className={styles.fav}>
       <header className={styles.header}>
         <Header />
       </header>
-      <h1 className={styles.title}>서울시 지역별 실시간 대기환경 현황</h1>
+      <h1 className={styles.title}>즐겨찾기</h1>
       <main className={styles.main}>
-        <AllItems />
+        <FavItems />
       </main>
       <aside>
         <a href='http://data.seoul.go.kr/dataList/OA-1201/S/1/datasetView.do' className={styles.link}>
@@ -21,4 +21,4 @@ const City = () => {
   )
 }
 
-export default City
+export default Favorite

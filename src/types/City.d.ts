@@ -16,7 +16,7 @@ export interface ICityRow {
   IDEX_NM: string
   IDEX_MVL: number
   ARPLT_MAIN: string
-  Fav: boolean
+  Fav?: boolean
 }
 
 interface RESULT {

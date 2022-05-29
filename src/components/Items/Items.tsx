@@ -1,0 +1,55 @@
+import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { Star } from '../../assets/svgs'
+import CityInfoItem from '../CitiInfo/CityInfoItem'
+import { setCityNameValue } from '../../redux/slice'
+import { ICityRow } from '../../types/City.d'
+import Grade from '../Grade/Grade'
+import styles from './Items.module.scss'
+
+interface props {
+  items: ICityRow[]
+}
+const Items = (props: props) => {
+  const { items } = props
+  const [cityName, setCityName] = useState('')
+  const [isOpen, setIsOpen] = useState(false)
+  const dispatch = useDispatch()
+
+  const handleCityInfo = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault()
+    setCityName(event.currentTarget.value)
+    setIsOpen(true)
+  }
+
+  const closeReq = () => {
+    setIsOpen(false)
+  }
+  useEffect(() => {
+    dispatch(setCityNameValue(cityName))
+  }, [dispatch, cityName])
+  return (
+    <ul className={styles.ul}>
+      {items.map((data: ICityRow) => (
+        <li key={data.MSRSTE_NM}>
+          <button type='button' className={styles.button} onClick={handleCityInfo} value={data.MSRSTE_NM}>
+            <Grade item={data.IDEX_NM} />
+            <dl className={styles.dl}>
+              <div className={styles.item}>
+                <dt>권역명</dt>
+                <dd>{data.MSRRGN_NM}</dd>
+              </div>
+              <div className={styles.item}>
+                <dt>측정소</dt>
+                <dd>{data.MSRSTE_NM}</dd>
+              </div>
+            </dl>
+            {data.Fav ? <Star className={styles.star} /> : null}
+          </button>
+          {isOpen ? <CityInfoItem data={data} open={isOpen} close={closeReq} /> : null}
+        </li>
+      ))}
+    </ul>
+  )
+}
+export default Items
