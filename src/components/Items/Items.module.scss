@@ -1,21 +1,24 @@
 @use '/src/styles/constants/colors';
 @use '/src/styles/mixins/flexbox';
+
 .ul {
   @include flexbox.flexbox(center, center);
   flex-direction: column;
+
   .button {
     @include flexbox.flexbox(center, center);
     flex-direction: row;
     width: 300px;
     height: 220px;
     padding: 20px;
-    border-radius: 60px;
-    box-shadow: 0px 4px 10px rgb(0 0 0 / 4%);
     margin-top: 10px;
     background-color: colors.$WHITE;
+    border-radius: 60px;
+
     .dl {
       width: 100%;
     }
+
     .item {
       @include flexbox.flexbox(center, center);
       flex-direction: row;
@@ -23,24 +26,27 @@
 
       dt {
         min-width: 80px;
+        margin-right: 0;
         font-size: 15px;
         font-weight: 600;
-        text-align: center;
-        margin-right: 0px;
         color: colors.$GRAY6;
-        &:after {
+        text-align: center;
+
+        &::after {
           content: ': ';
         }
       }
+
       dd {
         font-size: 15px;
         font-weight: 600;
-        text-align: center;
         color: colors.$GRAY6;
+        text-align: center;
       }
     }
   }
 }
+
 .star {
   fill: colors.$BAD;
 }

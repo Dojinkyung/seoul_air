@@ -1,17 +1,5 @@
 [[redirects]]
-  from = "https://seoulair.netlify.app/*"
-  to = "http:///seoulair.netlify.app/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://seoulair.netlify.app//*"
-  to = "http:///seoulair.netlify.app/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http:///seoulair.netlify.app/*"
-  to = "https:///seoulair.netlify.app/:splat"
-  status = 301
+from = "/proxy/*"
+  to = "http://openapi.seoul.go.kr:8088/:splat"
+  status = 200
   force = true

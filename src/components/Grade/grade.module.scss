@@ -8,6 +8,7 @@
   max-width: 200px;
   padding-top: 15px;
 }
+
 .goodIcon {
   fill: colors.$GOOD;
 }
@@ -15,49 +16,55 @@
 .sosoIcon {
   fill: colors.$SOSO;
 }
+
 .badIcon {
   fill: colors.$BAD;
 }
+
 .verybadIcon {
   fill: colors.$VERYBAD;
 }
+
 .fixIcon {
   fill: colors.$GRAY6;
 }
+
 .status1 {
   width: 38px;
+  margin: 0 20px 20px 0;
   font-size: 20px;
   font-weight: 600;
   color: colors.$GOOD;
-  margin: 0 20px 20px 0;
 }
 
 .status2 {
   width: 38px;
+  margin: 20px 0;
   font-size: 20px;
   font-weight: 600;
   color: colors.$SOSO;
-  margin: 20px 0 20px 0;
 }
+
 .status3 {
   width: 38px;
+  margin: 20px 0;
   font-size: 20px;
   font-weight: 600;
   color: colors.$BAD;
-  margin: 20px 0 20px 0;
 }
 
 .status4 {
   width: 38px;
+  margin: 20px 0;
   font-size: 20px;
   font-weight: 600;
   color: colors.$VERYBAD;
-  margin: 20px 0 20px 0;
 }
+
 .status5 {
   width: 80px;
+  margin: 20px 0;
   font-size: 20px;
   font-weight: 600;
   color: colors.$GRAY6;
-  margin: 20px 0 20px 0;
 }

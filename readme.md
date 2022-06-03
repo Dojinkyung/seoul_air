@@ -26,7 +26,11 @@
 
 `yarn start`
 
+api를 이용하기 위해서는 서울시 열린 데이터 api를 발급받아 env파일에 포함해야합니다.
+
 # 구현 내용
+
+http://data.seoul.go.kr/dataList/OA-1201/S/1/datasetView.do
 
 서울시의 공공데이터를 이용하여 실시간 대기환경을 받아와 좋음, 보통, 나쁨, 아주 나쁨의 등급을 보여주고 세부적인 정보를 제공해주는 사이트입니다.
 
@@ -35,6 +39,7 @@ API를 reactQuery를 통해 1시간마다 한번씩 받아올 수 있도록 한 
 지금까지 배웠던 기술들을 복습하며 만들어 보았습니다.
 
 # 구현 결과
+
 ![movie_app](https://user-images.githubusercontent.com/63532503/170852720-b04dd07b-e52a-488e-9ea2-7242d876d00f.gif)
 
 # 개선해야 할 점& 어려웠던 점
