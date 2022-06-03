@@ -1,5 +1,9 @@
 # 서울시 실시간 대기 환경 현황(원티드 개인과제)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8c963488-351b-41d4-9152-60535ac564b2/deploy-status)](https://seoulair.netlify.app/)
+
+배포 사이트는 api가 http로만 받아올 수 있어 크롬 기준 설정>개인 정보 및 보안> 사이트 설정> 사이트 전체에 저장된 권한 및 데이터 보기>https://seoulair.netlify.app/ 주소의 안전하지 않은 컨텐츠를 허용으로 변경해 주시면 볼 수 있습니다.
+
 # 기술 스텍
 
 - Typescript
@@ -47,4 +51,4 @@ API를 reactQuery를 통해 1시간마다 한번씩 받아올 수 있도록 한 
 - 아이디어를 생각하고 디자인을 해야하는 점이 어려웠습니다.
 - 처음 사용하는 기술이 없었던 점이 아쉽습니다.
 - 데이터를 필요에 맞게 변형시키는 작업이 어려웠습니다.
-- api의 http 문제로 배포하지 못한점이 아쉽습니다.
+- api의 http 문제로 제대로 배포하지 못한점이 아쉽습니다.
