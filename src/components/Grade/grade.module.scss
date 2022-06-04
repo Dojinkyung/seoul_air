@@ -21,7 +21,7 @@
   fill: colors.$BAD;
 }
 
-.verybadIcon {
+.veryBadIcon {
   fill: colors.$VERYBAD;
 }
 
@@ -30,41 +30,46 @@
 }
 
 .status1 {
-  width: 38px;
+  width: 80px;
   margin: 0 20px 20px 0;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: colors.$GOOD;
+  text-align: center;
 }
 
 .status2 {
-  width: 38px;
+  width: 80px;
   margin: 20px 0;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: colors.$SOSO;
+  text-align: center;
 }
 
 .status3 {
-  width: 38px;
+  width: 80px;
   margin: 20px 0;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: colors.$BAD;
+  text-align: center;
 }
 
 .status4 {
-  width: 38px;
+  width: 80px;
   margin: 20px 0;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: colors.$VERYBAD;
+  text-align: center;
 }
 
 .status5 {
   width: 80px;
   margin: 20px 0;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: colors.$GRAY6;
+  text-align: center;
 }

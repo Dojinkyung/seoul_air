@@ -14,12 +14,10 @@
     height: 30px;
     margin: 8px;
     font-size: 16px;
-    font-weight: 700;
     line-height: 19px;
     color: colors.$SOSO;
 
     &.isActive {
-      color: colors.$GOOD;
       background: colors.$GRAYD;
       border-radius: 10px;
     }

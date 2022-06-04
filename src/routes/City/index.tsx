@@ -8,7 +8,7 @@ const City = () => {
       <header className={styles.header}>
         <Header />
       </header>
-      <h1 className={styles.title}>서울시 지역별 실시간 대기환경 현황</h1>
+      <h1 className={styles.title}>서울시 지역별 실시간 대기환경</h1>
       <main className={styles.main}>
         <AllItems />
       </main>

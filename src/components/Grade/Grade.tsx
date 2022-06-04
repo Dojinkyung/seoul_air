@@ -34,7 +34,7 @@ const Grade = (props: props) => {
     if (item === '매우나쁨') {
       return (
         <div className={styles.grade}>
-          <VeryBad className={styles.VeryBadIcon} />
+          <VeryBad className={styles.veryBadIcon} />
           <h1 className={styles.status4}>{item}</h1>
         </div>
       )

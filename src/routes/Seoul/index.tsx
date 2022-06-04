@@ -19,7 +19,8 @@ const Seoul = () => {
         </header>
 
         <main className={styles.main}>
-          <h1 className={styles.title}>서울시 실시간 대기환경 평균 현황</h1>
+          {' '}
+          <h1 className={styles.title}>서울시 실시간 대기환경</h1>
           <Grade item={grade} />
           <SeoulInfo />
         </main>
