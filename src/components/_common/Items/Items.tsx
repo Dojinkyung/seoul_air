@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { Star } from '../../assets/svgs'
-import CityInfoItem from '../CitiInfo/CityInfoItem'
-import { setCityNameValue } from '../../redux/slice'
-import { ICityRow } from '../../types/City.d'
+import { StarIcon } from '../../../assets/svgs'
+import CityInfoItem from '../../CitiInfo/CityInfoItem'
+import { setCityNameValue } from '../../../redux/slice'
+import { ICityRow } from '../../../types/City.d'
 import Grade from '../Grade/Grade'
 import styles from './Items.module.scss'
 
@@ -44,9 +44,9 @@ const Items = (props: props) => {
                 <dd>{data.MSRSTE_NM}</dd>
               </div>
             </dl>
-            {data.Fav ? <Star className={styles.star} /> : null}
+            {data.Fav && <StarIcon className={styles.star} />}
           </button>
-          {isOpen ? <CityInfoItem data={data} open={isOpen} close={closeReq} /> : null}
+          {isOpen && <CityInfoItem data={data} open={isOpen} close={closeReq} />}
         </li>
       ))}
     </ul>

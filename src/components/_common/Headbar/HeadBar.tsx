@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { Bar, Wind } from '../../assets/svgs'
-import { setMenu } from '../../redux/slice'
+import { BarIcon, WindIcon } from '../../../assets/svgs'
+import { setMenu } from '../../../redux/slice'
+
 import Menu from '../Menu/Menu'
 import styles from './headbar.module.scss'
 
@@ -21,9 +22,9 @@ const Header = () => {
       <div className={styles.nav}>
         <main className={styles.main}>
           <button type='button' className={styles.button} onClick={handleBtn}>
-            <Bar />
+            <BarIcon />
           </button>
-          <Wind className={styles.windIcon} />
+          <WindIcon className={styles.windIcon} />
         </main>
       </div>
       <Menu />

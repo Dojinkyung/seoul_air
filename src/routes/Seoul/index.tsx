@@ -1,9 +1,9 @@
-import Grade from '../../components/Grade/Grade'
-import Header from '../../components/Headbar/HeadBar'
-import styles from './seoul.module.scss'
-import SeoulInfo from './SeoulInfo'
-import useSeoul from '../../services/useSeoul'
 import store from 'store'
+import Grade from '../../components/_common/Grade/Grade'
+import SeoulInfo from '../../components/SeoulInfo/SeoulInfo'
+import useSeoul from '../../services/useSeoul'
+import Header from '../../components/_common/Headbar/HeadBar'
+import styles from './seoul.module.scss'
 
 const Seoul = () => {
   const { dataSeoul } = useSeoul()
@@ -19,7 +19,6 @@ const Seoul = () => {
         </header>
 
         <main className={styles.main}>
-          {' '}
           <h1 className={styles.title}>서울시 실시간 대기환경</h1>
           <Grade item={grade} />
           <SeoulInfo />

@@ -1,7 +1,8 @@
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import { getMenu } from '../../redux/slice'
-import { cx } from '../../styles'
+
+import { getMenu } from '../../../redux/slice'
+import { cx } from '../../../styles'
 import styles from './menu.module.scss'
 
 const Menu = () => {

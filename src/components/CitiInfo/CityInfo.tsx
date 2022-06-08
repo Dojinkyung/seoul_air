@@ -1,3 +1,4 @@
+import dayjs from 'dayjs'
 import { ICityRow } from '../../types/City.d'
 import styles from './cityInfo.module.scss'
 
@@ -10,6 +11,18 @@ const CityInfo = (props: props) => {
     return (
       <div className={styles.info}>
         <dl className={styles.dl}>
+          <div className={styles.item}>
+            <dt>권역명</dt>
+            <dd>{item.MSRRGN_NM}</dd>
+          </div>
+          <div className={styles.item}>
+            <dt>측정소</dt>
+            <dd>{item.MSRSTE_NM}</dd>
+          </div>
+          <div className={styles.item}>
+            <dt>측정일시</dt>
+            <dd>{dayjs(item.MSRDT).format('YYYY-MM-DD HH:mm')}</dd>
+          </div>
           <div className={styles.item}>
             <dt>이산화질소</dt>
             <dd>{item.NO2}ppm</dd>
