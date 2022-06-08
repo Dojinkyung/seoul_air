@@ -15,13 +15,6 @@
 - Axios
 - Dayjs
 
-# 진행 기간
-
-    5.26: 아이디어 및 기초 셋팅
-    5.27: 데이터 처리 및 기능 구현, 차트
-    5.28: css 및 에러 처리, 리팩토링, readme 작성 초안
-    5.29: 기능 구현, refactoring, readme작성 완료
-
 # 실행 방법
 
 `git clone https://github.com/Dojinkyung/wanted_personal_project.git`
