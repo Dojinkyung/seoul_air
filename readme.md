@@ -1,4 +1,6 @@
-# 서울시 실시간 대기 환경 현황(원티드 개인과제)
+# ✨서울시 실시간 대기 환경 현황✨
+
+# 🚀 배포
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8c963488-351b-41d4-9152-60535ac564b2/deploy-status)](https://seoulair.netlify.app/)
 
@@ -15,17 +17,48 @@
 - Axios
 - Dayjs
 
-# 실행 방법
+## 📦 폴더 구조
 
-`git clone https://github.com/Dojinkyung/wanted_personal_project.git`
+```sh
+📦src
+ ┣ 📂assets
+ ┃ ┗ 📂svgs #svg
+ ┣ 📂components
+ ┃ ┣ 📂CityInfo # 구역별 정보
+ ┃ ┣ 📂SeoulInfo # 서울시 전체 정보
+ ┃ ┗ 📂_common # 공통 컴포넌트
+ ┣ 📂redux # redux
+ ┣ 📂routes # route별 index
+ ┃ ┣ 📂City
+ ┃ ┣ 📂Favorite
+ ┃ ┣ 📂Seoul
+ ┃ ┣ 📜index.jsx
+ ┃ ┗ 📜routes.module.scss
+ ┣ 📂services # 데이터 불러오는 컴포넌트
+ ┣ 📂styles #css 스타일을 위한 폴더
+ ┣ 📂types # typescript 정의 파일
+ ┗ 📂utils # axios 에러
+```
 
-`yarn insatll`
+# 📌 실행 방법
 
-`yarn start`
+```
+git clone https://github.com/Dojinkyung/wanted_personal_project.git`
+
+```
+
+```
+yarn insatll && yarn start
+
+```
 
 api를 이용하기 위해서는 서울시 열린 데이터 api를 발급받아 env파일에 포함해야합니다.
 
-# 구현 내용
+## 2. 📸 화면
+
+![movie_app](https://user-images.githubusercontent.com/63532503/170852720-b04dd07b-e52a-488e-9ea2-7242d876d00f.gif)
+
+# 💡 구현 내용
 
 http://data.seoul.go.kr/dataList/OA-1201/S/1/datasetView.do
 
@@ -34,10 +67,6 @@ http://data.seoul.go.kr/dataList/OA-1201/S/1/datasetView.do
 API를 reactQuery를 통해 1시간마다 한번씩 받아올 수 있도록 한 후 받아온데이터를 등급에 따라 색과 이모티콘을 이용하여 표시해 주었습니다. 또한 세부사항을 victory 차트를 이용하여 그래프로 시각화하였습니다.
 
 지금까지 배웠던 기술들을 복습하며 만들어 보았습니다.
-
-# 구현 결과
-
-![movie_app](https://user-images.githubusercontent.com/63532503/170852720-b04dd07b-e52a-488e-9ea2-7242d876d00f.gif)
 
 # 개선해야 할 점& 어려웠던 점
 

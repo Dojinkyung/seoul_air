@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query'
 import { isAxiosError } from '../utils/axios'
-import { axios } from '../hooks/worker'
 import { ICityRow } from '../types/City.d'
+import axios from 'axios'
 
 const BASE_URL = `http://openapi.seoul.go.kr:8088/${process.env.REACT_APP_API_KEY}/json/RealtimeCityAir/1/25`
 

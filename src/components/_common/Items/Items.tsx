@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { StarIcon } from '../../../assets/svgs'
-import CityInfoItem from '../../CitiInfo/CityInfoItem'
+import CityInfoItem from '../../CityInfo/CityInfoItem'
 import { setCityNameValue } from '../../../redux/slice'
 import { ICityRow } from '../../../types/City.d'
 import Grade from '../Grade/Grade'
