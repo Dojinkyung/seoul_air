@@ -7,6 +7,7 @@ import { ICityRow } from '../../../types/City.d'
 import Grade from '../Grade/Grade'
 import styles from './mobileItems.module.scss'
 import { cx } from '../../../styles'
+import FavBtn from '../FavBtn/FavBtn'
 
 interface props {
   items: ICityRow[]
@@ -47,7 +48,7 @@ const MobileItems = (props: props) => {
                     <dd>{data.MSRSTE_NM}</dd>
                   </div>
                 </dl>
-                <StarIcon className={cx(styles.starIcon1, { [styles.starIcon2]: !data.Fav })} />
+                <FavBtn data={data} active={data.Fav} />
               </button>
               {isOpen && <CityInfoItem data={data} open={isOpen} close={closeReq} />}
             </li>

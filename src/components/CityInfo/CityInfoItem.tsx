@@ -10,6 +10,7 @@ import { StarIcon, XIcon } from '../../assets/svgs'
 import Grade from '../_common/Grade/Grade'
 import { cx } from '../../styles'
 import CitiesChart from '../_common/Chart/CitiesChart'
+import FavBtn from '../_common/FavBtn/FavBtn'
 
 interface props {
   data: ICityRow
@@ -18,23 +19,7 @@ interface props {
 }
 const CityInfoItem = (props: props) => {
   const cityName = useSelector(getCityNameValue)
-  const dispatch = useDispatch()
   const { data, open, close } = props
-  const handleFav = () => {
-    if (data.Fav === false) {
-      data.Fav = true
-      store.set('fav', [...store.get('fav'), data])
-      dispatch(setCity(store.get('fav')))
-    } else {
-      data.Fav = false
-      store.set(
-        'fav',
-        [...store.get('fav')].filter((fav: ICityRow) => fav.MSRSTE_NM !== data?.MSRSTE_NM)
-      )
-      dispatch(setCity(store.get('fav')))
-    }
-    close()
-  }
   if (data.MSRSTE_NM === cityName) {
     return (
       <div className={cx({ [styles.bg]: open })}>
@@ -43,9 +28,7 @@ const CityInfoItem = (props: props) => {
             <button type='button' onClick={close} className={styles.backBTN}>
               <XIcon className={styles.backIcon} />
             </button>
-            <button type='button' onClick={handleFav} className={styles.favBTN}>
-              <StarIcon className={cx(styles.starIcon1, { [styles.starIcon2]: !data.Fav })} />
-            </button>
+            <FavBtn data={data} active={data.Fav} />
           </div>
           <Grade item={data.IDEX_NM} />
           <CityInfo item={data} />

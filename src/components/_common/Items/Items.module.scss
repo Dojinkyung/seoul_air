@@ -109,18 +109,11 @@
         padding-right: 50px;
         @include flexbox.flexbox(center, center);
       }
-      .favBtn {
-        margin-right: 30px;
-        .starIcon1 {
-          width: 30px;
-          height: 30px;
-          fill: colors.$BAD;
-        }
-
-        .starIcon2 {
-          fill: colors.$GRAYD;
-        }
-      }
     }
+  }
+  .noResults {
+    @include flexbox.flexbox(center, center);
+    font-size: 50px;
+    text-align: center;
   }
 }

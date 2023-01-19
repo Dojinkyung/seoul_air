@@ -1,11 +1,10 @@
-import { StarIcon } from '../../../assets/svgs'
 import { ICityRow } from '../../../types/City.d'
 import Grade from '../Grade/Grade'
 import styles from './items.module.scss'
-import { cx } from '../../../styles'
 import { useEffect, useState } from 'react'
 import CityInfo from '../../CityInfo/CityInfo'
 import CitiesChart from '../Chart/CitiesChart'
+import FavBtn from '../FavBtn/FavBtn'
 
 interface props {
   items: ICityRow[]
@@ -68,16 +67,14 @@ const Items = (props: props) => {
                     <div className={styles.data}>
                       <CitiesChart item={data} />
                     </div>
-                    <button type='button' className={styles.favBtn}>
-                      <StarIcon className={cx(styles.starIcon1, { [styles.starIcon2]: !data.Fav })} />
-                    </button>
+                    <FavBtn data={data} active={data.Fav} />
                   </li>
                 )
               }
               return null
             })
           ) : (
-            <div className={styles.noResults}>No Results</div>
+            <div className={styles.noResults}>Loading</div>
           )}
         </ul>
       </div>
