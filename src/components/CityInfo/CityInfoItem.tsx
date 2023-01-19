@@ -1,12 +1,9 @@
-import { useDispatch, useSelector } from 'react-redux'
-import store from 'store'
-
+import { useSelector } from 'react-redux'
 import styles from './cityInfoItem.module.scss'
 import CityInfo from './CityInfo'
 import { ICityRow } from '../../types/City.d'
-import { getCityNameValue, setCity } from '../../redux/slice'
-
-import { StarIcon, XIcon } from '../../assets/svgs'
+import { getCityNameValue } from '../../redux/slice'
+import { XIcon } from '../../assets/svgs'
 import Grade from '../_common/Grade/Grade'
 import { cx } from '../../styles'
 import CitiesChart from '../_common/Chart/CitiesChart'

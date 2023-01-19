@@ -1,4 +1,4 @@
-import Items from '../../components/_common/Items/MobileItems'
+import Items from '../../components/_common/Items/Items'
 import NavBar from '../../components/_common/Navbar/NavBar'
 import useCityConvert from '../../services/useCityConvert'
 import styles from './fav.module.scss'
@@ -10,9 +10,11 @@ const Favorite = () => {
     return (
       <div className={styles.fav}>
         <NavBar />
-        <h1 className={styles.title}>즐겨찾기</h1>
         <main className={styles.main}>
-          <Items items={filtered} />
+          <h1 className={styles.title}>즐겨찾기</h1>
+          <section className={styles.info}>
+            <Items items={filtered} />
+          </section>
         </main>
         <aside>
           <a href='http://data.seoul.go.kr/dataList/OA-1201/S/1/datasetView.do' className={styles.link}>

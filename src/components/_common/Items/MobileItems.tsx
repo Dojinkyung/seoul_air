@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { StarIcon } from '../../../assets/svgs'
 import CityInfoItem from '../../CityInfo/CityInfoItem'
 import { setCityNameValue } from '../../../redux/slice'
 import { ICityRow } from '../../../types/City.d'
 import Grade from '../Grade/Grade'
 import styles from './mobileItems.module.scss'
-import { cx } from '../../../styles'
 import FavBtn from '../FavBtn/FavBtn'
 
 interface props {
