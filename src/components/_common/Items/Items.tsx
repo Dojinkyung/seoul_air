@@ -30,25 +30,30 @@ const Items = (props: props) => {
   }, [dispatch, cityName])
   return (
     <ul className={styles.ul}>
-      {items.map((data: ICityRow) => (
-        <li key={data.MSRSTE_NM}>
-          <button type='button' className={styles.button} onClick={handleCityInfo} value={data.MSRSTE_NM}>
-            <Grade item={data.IDEX_NM} />
-            <dl className={styles.dl}>
-              <div className={styles.item}>
-                <dt>권역명</dt>
-                <dd>{data.MSRRGN_NM}</dd>
-              </div>
-              <div className={styles.item}>
-                <dt>측정소</dt>
-                <dd>{data.MSRSTE_NM}</dd>
-              </div>
-            </dl>
-            {data.Fav && <StarIcon className={styles.star} />}
-          </button>
-          {isOpen && <CityInfoItem data={data} open={isOpen} close={closeReq} />}
-        </li>
-      ))}
+      {items.map((data: ICityRow) => {
+        if (data.IDEX_NM.length > 0) {
+          return (
+            <li key={data.MSRSTE_NM}>
+              <button type='button' className={styles.button} onClick={handleCityInfo} value={data.MSRSTE_NM}>
+                <Grade item={data.IDEX_NM} />
+                <dl className={styles.dl}>
+                  <div className={styles.item}>
+                    <dt>권역명</dt>
+                    <dd>{data.MSRRGN_NM}</dd>
+                  </div>
+                  <div className={styles.item}>
+                    <dt>측정소</dt>
+                    <dd>{data.MSRSTE_NM}</dd>
+                  </div>
+                </dl>
+                {data.Fav && <StarIcon className={styles.star} />}
+              </button>
+              {isOpen && <CityInfoItem data={data} open={isOpen} close={closeReq} />}
+            </li>
+          )
+        }
+        return null
+      })}
     </ul>
   )
 }

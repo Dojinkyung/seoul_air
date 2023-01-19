@@ -18,7 +18,7 @@ const Header = () => {
   }, [clickedButton, dispatch])
 
   return (
-    <>
+    <div>
       <div className={styles.nav}>
         <main className={styles.main}>
           <button type='button' className={styles.button} onClick={handleBtn}>
@@ -28,7 +28,7 @@ const Header = () => {
         </main>
       </div>
       <Menu />
-    </>
+    </div>
   )
 }
 export default Header
