@@ -1,0 +1,26 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+.nav {
+  @include flexbox.flexbox(center, center);
+  width: 100%;
+  gap: 10px;
+  background-color: colors.$WHITE;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  flex-direction: column;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  .links {
+    @include flexbox.flexbox(center, center);
+    width: 100%;
+    .button {
+      position: absolute;
+      left: 0;
+      padding-left: 20px;
+    }
+
+    .windIcon {
+      fill: colors.$GOOD;
+    }
+  }
+}

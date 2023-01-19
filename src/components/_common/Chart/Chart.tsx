@@ -1,23 +1,14 @@
 import { VictoryBar, VictoryChart, VictoryTooltip, VictoryVoronoiContainer, VictoryAxis } from 'victory'
-import { ICityRow } from '../../../types/City.d'
 
 interface props {
-  item: ICityRow
+  data1: { x: string; y: number; label: string }[]
+  data2: { x: string; y: number; label: string }[]
 }
 const Chart = (props: props) => {
-  const { item } = props
-  const data1 = [
-    { x: '이산화질소', y: item.NO2, label: `${item.NO2}ppm` },
-    { x: '오존', y: item.O3, label: `${item.O3}ppm` },
-    { x: '일산화탄소', y: item.CO, label: `${item.CO}ppm` },
-    { x: '아황산가스', y: item.SO2, label: `${item.SO2}ppm` },
-  ]
-  const data2 = [
-    { x: '미세먼지', y: item.PM10, label: `${item.PM10}㎍/㎥` },
-    { x: '초미세먼지', y: item.PM25, label: `${item.PM25}㎍/㎥` },
-  ]
+  const { data1 } = props
+  const { data2 } = props
   return (
-    <>
+    <div>
       <VictoryChart containerComponent={<VictoryVoronoiContainer />} domainPadding={{ x: 40, y: [0, 20] }}>
         <VictoryAxis
           standalone={false}
@@ -109,7 +100,7 @@ const Chart = (props: props) => {
           }
         />
       </VictoryChart>
-    </>
+    </div>
   )
 }
 export default Chart

@@ -1,5 +1,5 @@
-import Header from '../../components/_common/Headbar/HeadBar'
 import Items from '../../components/_common/Items/Items'
+import NavBar from '../../components/_common/Navbar/NavBar'
 import useCityConvert from '../../services/useCityConvert'
 import styles from './fav.module.scss'
 
@@ -9,9 +9,7 @@ const Favorite = () => {
   if (filtered) {
     return (
       <div className={styles.fav}>
-        <header className={styles.header}>
-          <Header />
-        </header>
+        <NavBar />
         <h1 className={styles.title}>즐겨찾기</h1>
         <main className={styles.main}>
           <Items items={filtered} />

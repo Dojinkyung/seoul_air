@@ -1,20 +1,19 @@
-import Header from '../../components/_common/Headbar/HeadBar'
 import styles from './city.module.scss'
-
 import useCityConvert from '../../services/useCityConvert'
 import Items from '../../components/_common/Items/Items'
+import NavBar from '../../components/_common/Navbar/NavBar'
 
 const City = () => {
   const { dataCityConvert } = useCityConvert()
   if (dataCityConvert) {
     return (
       <div className={styles.city}>
-        <header className={styles.header}>
-          <Header />
-        </header>
-        <h1 className={styles.title}>서울시 지역별 실시간 대기환경</h1>
+        <NavBar />
         <main className={styles.main}>
-          <Items items={dataCityConvert} />
+          <h1 className={styles.title}>서울시 지역별 실시간 대기환경</h1>
+          <section className={styles.info}>
+            <Items items={dataCityConvert} />
+          </section>
         </main>
         <aside>
           <a href='http://data.seoul.go.kr/dataList/OA-1201/S/1/datasetView.do' className={styles.link}>

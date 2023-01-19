@@ -2,6 +2,7 @@ import styles from './routes.module.scss'
 import Seoul from './Seoul'
 import City from './City'
 import Favorite from './Favorite'
+import NavBar from '../components/_common/Navbar/NavBar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const App = () => {

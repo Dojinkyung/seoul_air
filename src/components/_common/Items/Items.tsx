@@ -5,7 +5,7 @@ import CityInfoItem from '../../CityInfo/CityInfoItem'
 import { setCityNameValue } from '../../../redux/slice'
 import { ICityRow } from '../../../types/City.d'
 import Grade from '../Grade/Grade'
-import styles from './Items.module.scss'
+import styles from './items.module.scss'
 
 interface props {
   items: ICityRow[]

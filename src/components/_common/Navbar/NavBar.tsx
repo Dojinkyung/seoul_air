@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 import { BarIcon, WindIcon } from '../../../assets/svgs'
 import { setMenu } from '../../../redux/slice'
 
 import Menu from '../Menu/Menu'
-import styles from './headbar.module.scss'
+import styles from './navbar.module.scss'
 
-const Header = () => {
+const NavBar = () => {
   const [clickedButton, setClickedButton] = useState(false)
   const dispatch = useDispatch()
   const handleBtn = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -18,17 +19,17 @@ const Header = () => {
   }, [clickedButton, dispatch])
 
   return (
-    <div>
-      <div className={styles.nav}>
-        <main className={styles.main}>
-          <button type='button' className={styles.button} onClick={handleBtn}>
-            <BarIcon />
-          </button>
+    <nav className={styles.nav}>
+      <div className={styles.links}>
+        <button type='button' className={styles.button} onClick={handleBtn}>
+          <BarIcon />
+        </button>
+        <NavLink to='/'>
           <WindIcon className={styles.windIcon} />
-        </main>
+        </NavLink>
       </div>
       <Menu />
-    </div>
+    </nav>
   )
 }
-export default Header
+export default NavBar

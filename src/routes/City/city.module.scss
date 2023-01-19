@@ -2,37 +2,39 @@
 @use '/src/styles/mixins/flexbox';
 
 .city {
-  @include flexbox.flexbox(end, center);
+  @include flexbox.flexbox(center, center);
   flex-direction: column;
-  width: 360px;
-  height: 720px;
-  overflow: hidden;
-  background-color: colors.$APP_BACKGROUND_COLOR;
-  border-radius: 60px;
-
-  .header {
-    position: fixed;
-    top: 0;
-  }
-
-  .title {
-    display: inline;
-    font-size: 24px;
-    font-weight: 500;
-    color: colors.$GRAY3;
-    text-align: center;
-  }
-
   .main {
-    width: 300px;
-    height: 550px;
+    @include flexbox.flexbox(center, center);
+    width: 80%;
+    height: 80vh;
+    margin-top: 40px;
+    flex-direction: column;
     overflow: scroll;
+    .title {
+      margin: 0px 0px 30px 0px;
+      font-size: 29px;
+      font-weight: 600;
+      color: colors.$GRAY3;
+      text-align: center;
+    }
+    .info {
+      width: 100%;
+      height: 100%;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      min-width: 300px;
+      flex-direction: row;
+      background-color: colors.$WHITE;
+      border-radius: 20px;
+      @include flexbox.flexbox(center, center);
+    }
   }
-
-  .link {
-    font-size: 12px;
-    line-height: 14px;
-    color: colors.$SOSO;
-    text-decoration: underline;
+  aside {
+    margin: 10px 0px 0px 0px;
+    .link {
+      font-size: 18px;
+      color: colors.$SOSO;
+      text-decoration: underline;
+    }
   }
 }

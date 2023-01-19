@@ -10,6 +10,7 @@ import { getCityNameValue, setCity } from '../../redux/slice'
 import { StarIcon, XIcon } from '../../assets/svgs'
 import Grade from '../_common/Grade/Grade'
 import { cx } from '../../styles'
+import CitiesChart from '../_common/Chart/CitiesChart'
 
 interface props {
   data: ICityRow
@@ -49,7 +50,7 @@ const CityInfoItem = (props: props) => {
           </div>
           <Grade item={data.IDEX_NM} />
           <CityInfo item={data} />
-          <Chart item={data} />
+          <CitiesChart item={data} />
         </div>
       </div>
     )
