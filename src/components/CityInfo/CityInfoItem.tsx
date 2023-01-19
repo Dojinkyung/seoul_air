@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import store from 'store'
 
 import styles from './cityInfoItem.module.scss'
-import Chart from '../_common/Chart/Chart'
 import CityInfo from './CityInfo'
 import { ICityRow } from '../../types/City.d'
 import { getCityNameValue, setCity } from '../../redux/slice'

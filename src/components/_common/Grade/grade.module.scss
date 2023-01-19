@@ -6,7 +6,6 @@
   flex-direction: column;
   min-width: 80px;
   max-width: 200px;
-  padding-top: 15px;
 }
 
 .goodIcon {
@@ -31,45 +30,39 @@
 
 .status1 {
   width: 80px;
-  margin: 20px 0;
+  margin: 20px;
   font-size: 24px;
   font-weight: 600;
   color: colors.$GOOD;
-  text-align: center;
 }
 
 .status2 {
   width: 80px;
-  margin: 20px 0;
+  margin: 20px;
   font-size: 24px;
   font-weight: 600;
   color: colors.$SOSO;
-  text-align: center;
 }
 
 .status3 {
   width: 80px;
-  margin: 20px 0;
+  margin: 20px;
   font-size: 24px;
   font-weight: 600;
-  color: colors.$BAD;
-  text-align: center;
 }
 
 .status4 {
   width: 80px;
-  margin: 20px 0;
+  margin: 20px;
   font-size: 24px;
   font-weight: 600;
   color: colors.$VERYBAD;
-  text-align: center;
 }
 
 .status5 {
   width: 80px;
-  margin: 20px 0;
+  margin: 20px;
   font-size: 24px;
   font-weight: 600;
   color: colors.$GRAY6;
-  text-align: center;
 }

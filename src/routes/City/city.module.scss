@@ -5,14 +5,14 @@
   @include flexbox.flexbox(center, center);
   flex-direction: column;
   .main {
-    @include flexbox.flexbox(center, center);
-    width: 80%;
+    @include flexbox.flexbox(start, center);
+    width: 100%;
     height: 80vh;
     margin-top: 40px;
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
     .title {
-      margin: 0px 0px 30px 0px;
+      margin: 0px 0px 15px 0px;
       font-size: 29px;
       font-weight: 600;
       color: colors.$GRAY3;
@@ -21,12 +21,12 @@
     .info {
       width: 100%;
       height: 100%;
-      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
       min-width: 300px;
       flex-direction: row;
-      background-color: colors.$WHITE;
       border-radius: 20px;
-      @include flexbox.flexbox(center, center);
+      overflow: scroll;
+      flex-direction: column;
+      @include flexbox.flexbox(start, center);
     }
   }
   aside {

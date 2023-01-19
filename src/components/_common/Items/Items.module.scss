@@ -1,50 +1,126 @@
 @use '/src/styles/constants/colors';
 @use '/src/styles/mixins/flexbox';
-
-.ul {
+.carouselWrapper {
   @include flexbox.flexbox(center, center);
+  width: 100%;
+  height: 100%;
   flex-direction: column;
+  position: relative;
+  .leftArrow,
+  .rightArrow {
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #ddd;
+  }
+  .leftArrow {
+    left: 24px;
+  }
 
-  .button {
-    @include flexbox.flexbox(center, center);
-    flex-direction: row;
-    width: 300px;
-    height: 220px;
-    padding: 20px;
-    margin-top: 10px;
-    background-color: colors.$WHITE;
-    border-radius: 60px;
-
-    .dl {
-      width: 100%;
+  .rightArrow {
+    right: 24px;
+  }
+  @media (hover: none) and (pointer: coarse) {
+    .leftArrow,
+    .rightArrow {
+      display: none;
     }
-
-    .item {
-      @include flexbox.flexbox(center, center);
+  }
+  .carouselContentWrapper {
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    .carouselContent {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      transition: all 250ms linear;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      list-style: none;
+    }
+    .carouselContent::-webkit-scrollbar,
+    .carouselContent::-webkit-scrollbar {
+      display: none;
+    }
+    .carouselContent > * {
+      width: calc(100% / 1);
+      flex-shrink: 0;
+      flex-grow: 1;
+    }
+    li {
+      width: 100%;
+      height: 100%;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      min-width: 300px;
       flex-direction: row;
-      margin: 15px;
-
-      dt {
-        min-width: 80px;
-        margin-right: 0;
-        font-size: 15px;
-        color: colors.$GRAY6;
-        text-align: center;
-
-        &::after {
-          content: ': ';
+      background-color: colors.$WHITE;
+      border-radius: 20px;
+      @include flexbox.flexbox(center, center);
+      .head {
+        min-width: 300px;
+        padding-left: 50px;
+        @include flexbox.flexbox(center, center);
+        flex-direction: column;
+        .grade {
+          min-width: 250px;
+          text-align: center;
+          margin-left: 50px;
+        }
+        .dl {
+          width: 100%;
+          height: 100%;
+          min-width: 300px;
+          flex-direction: row;
+          background-color: colors.$WHITE;
+          border-radius: 20px;
+          @include flexbox.flexbox(center, center);
+        }
+        .item {
+          @include flexbox.flexbox(evenly, center);
+          margin: 15px;
+          flex-direction: row;
+          dt {
+            margin-right: 20px;
+            font-size: 15px;
+            color: colors.$GRAY6;
+            text-align: center;
+            &::after {
+              content: ': ';
+            }
+          }
+          dd {
+            font-size: 15px;
+            color: colors.$GRAY6;
+            text-align: center;
+          }
         }
       }
 
-      dd {
-        font-size: 15px;
-        color: colors.$GRAY6;
-        text-align: center;
+      .data {
+        width: 50%;
+        min-width: 250px;
+        flex-direction: row;
+        padding-right: 50px;
+        @include flexbox.flexbox(center, center);
+      }
+      .favBtn {
+        margin-right: 30px;
+        .starIcon1 {
+          width: 30px;
+          height: 30px;
+          fill: colors.$BAD;
+        }
+
+        .starIcon2 {
+          fill: colors.$GRAYD;
+        }
       }
     }
   }
-}
-
-.star {
-  fill: colors.$BAD;
 }

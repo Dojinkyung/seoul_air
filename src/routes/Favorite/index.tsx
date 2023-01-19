@@ -1,4 +1,4 @@
-import Items from '../../components/_common/Items/Items'
+import Items from '../../components/_common/Items/MobileItems'
 import NavBar from '../../components/_common/Navbar/NavBar'
 import useCityConvert from '../../services/useCityConvert'
 import styles from './fav.module.scss'

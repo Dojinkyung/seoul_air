@@ -2,6 +2,7 @@ import styles from './city.module.scss'
 import useCityConvert from '../../services/useCityConvert'
 import Items from '../../components/_common/Items/Items'
 import NavBar from '../../components/_common/Navbar/NavBar'
+import MobileItems from '../../components/_common/Items/MobileItems'
 
 const City = () => {
   const { dataCityConvert } = useCityConvert()
@@ -13,6 +14,7 @@ const City = () => {
           <h1 className={styles.title}>서울시 지역별 실시간 대기환경</h1>
           <section className={styles.info}>
             <Items items={dataCityConvert} />
+            {/* <MobileItems items={dataCityConvert} /> */}
           </section>
         </main>
         <aside>
