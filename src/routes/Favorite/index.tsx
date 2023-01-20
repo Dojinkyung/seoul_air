@@ -1,4 +1,5 @@
 import Items from '../../components/_common/Items/Items'
+import MobileItems from '../../components/_common/Items/MobileItems'
 import NavBar from '../../components/_common/Navbar/NavBar'
 import useCityConvert from '../../services/useCityConvert'
 import styles from './fav.module.scss'
@@ -14,6 +15,7 @@ const Favorite = () => {
           <h1 className={styles.title}>즐겨찾기</h1>
           <section className={styles.info}>
             <Items items={filtered} />
+            <MobileItems items={filtered} />
           </section>
         </main>
         <aside>

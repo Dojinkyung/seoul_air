@@ -43,35 +43,34 @@ const Items = (props: props) => {
         <ul className={styles.carouselContent} style={{ transform: `translateX(-${currentIndex * (100 / show)}%)` }}>
           {cityItem ? (
             cityItem.map((data: ICityRow) => {
-              if (data.IDEX_NM.length > 0) {
-                return (
-                  <li key={data.MSRSTE_NM}>
-                    <div className={styles.head}>
-                      <div className={styles.grade}>
-                        <Grade item={data.IDEX_NM} />
+              return (
+                <li key={data.MSRSTE_NM}>
+                  <div className={styles.head}>
+                    <div className={styles.grade}>
+                      <Grade item={data.IDEX_NM} />
+                    </div>
+                    <dl className={styles.dl}>
+                      <div className={styles.item}>
+                        <dt>권역명</dt>
+                        <dd>{data.MSRRGN_NM}</dd>
                       </div>
-                      <dl className={styles.dl}>
-                        <div className={styles.item}>
-                          <dt>권역명</dt>
-                          <dd>{data.MSRRGN_NM}</dd>
-                        </div>
-                        <div className={styles.item}>
-                          <dt>측정소</dt>
-                          <dd>{data.MSRSTE_NM}</dd>
-                        </div>
-                      </dl>
-                    </div>
-                    <div className={styles.data}>
-                      <CityInfo item={data} />
-                    </div>
-                    <div className={styles.data}>
-                      <CitiesChart item={data} />
-                    </div>
+                      <div className={styles.item}>
+                        <dt>측정소</dt>
+                        <dd>{data.MSRSTE_NM}</dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <div className={styles.data}>
+                    <CityInfo item={data} />
+                  </div>
+                  <div className={styles.data}>
+                    <CitiesChart item={data} />
+                  </div>
+                  <div className={styles.favBtn}>
                     <FavBtn data={data} active={data.Fav} />
-                  </li>
-                )
-              }
-              return null
+                  </div>
+                </li>
+              )
             })
           ) : (
             <div className={styles.noResults}>Loading</div>

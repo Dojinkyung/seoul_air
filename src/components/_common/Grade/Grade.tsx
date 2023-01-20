@@ -39,16 +39,17 @@ const Grade = (props: props) => {
         </div>
       )
     }
-    if (item === '점검중') {
-      return (
-        <div className={styles.grade}>
-          <FixIcon className={styles.fixIcon} />
-          <h1 className={styles.status5}>{item}</h1>
-        </div>
-      )
-    }
+    return (
+      <div className={styles.grade}>
+        <FixIcon className={styles.fixIcon} />
+      </div>
+    )
   }
-  return null
+  return (
+    <div className={styles.grade}>
+      <FixIcon className={styles.fixIcon} />
+    </div>
+  )
 }
 
 export default Grade

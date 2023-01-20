@@ -61,7 +61,8 @@
       flex-direction: row;
       background-color: colors.$WHITE;
       border-radius: 20px;
-      @include flexbox.flexbox(center, center);
+      position: relative;
+      @include flexbox.flexbox(even, center);
       .head {
         min-width: 300px;
         padding-left: 50px;
@@ -109,11 +110,22 @@
         padding-right: 50px;
         @include flexbox.flexbox(center, center);
       }
+      .favBtn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 10px;
+      }
     }
   }
   .noResults {
     @include flexbox.flexbox(center, center);
     font-size: 50px;
     text-align: center;
+  }
+}
+@media screen and (max-width: 878px) {
+  .carouselWrapper {
+    display: none;
   }
 }

@@ -5,7 +5,6 @@ import { setCityNameValue } from '../../../redux/slice'
 import { ICityRow } from '../../../types/City.d'
 import Grade from '../Grade/Grade'
 import styles from './mobileItems.module.scss'
-import FavBtn from '../FavBtn/FavBtn'
 
 interface props {
   items: ICityRow[]
@@ -31,28 +30,24 @@ const MobileItems = (props: props) => {
   return (
     <ul className={styles.ul}>
       {items.map((data: ICityRow) => {
-        if (data.IDEX_NM.length > 0) {
-          return (
-            <li key={data.MSRSTE_NM}>
-              <button type='button' className={styles.button} onClick={handleCityInfo} value={data.MSRSTE_NM}>
-                <Grade item={data.IDEX_NM} />
-                <dl className={styles.dl}>
-                  <div className={styles.item}>
-                    <dt>권역명</dt>
-                    <dd>{data.MSRRGN_NM}</dd>
-                  </div>
-                  <div className={styles.item}>
-                    <dt>측정소</dt>
-                    <dd>{data.MSRSTE_NM}</dd>
-                  </div>
-                </dl>
-                <FavBtn data={data} active={data.Fav} />
-              </button>
-              {isOpen && <CityInfoItem data={data} open={isOpen} close={closeReq} />}
-            </li>
-          )
-        }
-        return null
+        return (
+          <li key={data.MSRSTE_NM}>
+            <button type='button' className={styles.button} onClick={handleCityInfo} value={data.MSRSTE_NM}>
+              <Grade item={data.IDEX_NM} />
+              <dl className={styles.dl}>
+                <div className={styles.item}>
+                  <dt>권역명</dt>
+                  <dd>{data.MSRRGN_NM}</dd>
+                </div>
+                <div className={styles.item}>
+                  <dt>측정소</dt>
+                  <dd>{data.MSRSTE_NM}</dd>
+                </div>
+              </dl>
+            </button>
+            {isOpen && <CityInfoItem data={data} open={isOpen} close={closeReq} />}
+          </li>
+        )
       })}
     </ul>
   )

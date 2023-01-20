@@ -1,6 +1,10 @@
 @use '/src/styles/constants/colors';
 .favBtn {
-  margin-right: 30px;
+  width: 30px;
+  height: 30px;
+  right: 3px;
+  z-index: 100;
+  cursor: pointer;
   .starIcon1 {
     width: 30px;
     height: 30px;

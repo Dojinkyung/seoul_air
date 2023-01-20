@@ -14,7 +14,7 @@ const City = () => {
           <h1 className={styles.title}>서울시 지역별 실시간 대기환경</h1>
           <section className={styles.info}>
             <Items items={dataCityConvert} />
-            {/* <MobileItems items={dataCityConvert} /> */}
+            <MobileItems items={dataCityConvert} />
           </section>
         </main>
         <aside>
