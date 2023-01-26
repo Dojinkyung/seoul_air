@@ -4,7 +4,7 @@
 .grade {
   @include flexbox.flexbox(center, center);
   flex-direction: column;
-  min-width: 80px;
+  min-width: 100px;
   max-width: 200px;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .status1 {
-  width: 80px;
+  width: 100%;
   margin: 20px;
   font-size: 24px;
   font-weight: 600;
@@ -37,7 +37,7 @@
 }
 
 .status2 {
-  width: 80px;
+  width: 100%;
   margin: 20px;
   font-size: 24px;
   font-weight: 600;
@@ -45,7 +45,7 @@
 }
 
 .status3 {
-  width: 80px;
+  width: 100%;
   margin: 20px;
   font-size: 24px;
   font-weight: 600;
@@ -53,7 +53,7 @@
 }
 
 .status4 {
-  width: 80px;
+  width: 100%;
   margin: 20px;
   font-size: 24px;
   font-weight: 600;
@@ -61,7 +61,7 @@
 }
 
 .status5 {
-  width: 80px;
+  width: 100%;
   margin: 20px;
   font-size: 24px;
   font-weight: 600;
