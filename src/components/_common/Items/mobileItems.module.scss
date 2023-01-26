@@ -1,6 +1,7 @@
 @use '/src/styles/constants/colors';
 @use '/src/styles/mixins/flexbox';
 @use '/src/styles/mixins/responsive';
+
 .ul {
   @include flexbox.flexbox(center, center);
   flex-direction: column;
